@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 31277939}
   - component: {fileID: 31277938}
   - component: {fileID: 31277937}
+  - component: {fileID: 31277940}
   m_Layer: 5
   m_Name: Move Button
   m_TagString: Untagged
@@ -157,9 +158,9 @@ RectTransform:
   - {fileID: 332863123}
   m_Father: {fileID: 1237235487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507, y: 220}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -95.5, y: -52}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31277937
@@ -244,6 +245,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31277935}
   m_CullTransparentMesh: 1
+--- !u!114 &31277940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31277935}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &50624488
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,11 +302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 50624488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567ab83825fa51e4f81adc8963fb6574, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b0100cc02086a042b72a2989d51334f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 2000515099}
-  player2: {fileID: 1650866454}
+  aiPlayer: {fileID: 1650866454}
   moveButton: {fileID: 31277937}
   punchButton: {fileID: 358554525}
   endTurnButton: {fileID: 115511114}
@@ -328,9 +360,9 @@ RectTransform:
   - {fileID: 440633780}
   m_Father: {fileID: 1237235487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507, y: 65}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -95.5, y: -207}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115511114
@@ -447,10 +479,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 31277936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332863124
 MonoBehaviour:
@@ -561,6 +593,7 @@ GameObject:
   - component: {fileID: 358554527}
   - component: {fileID: 358554526}
   - component: {fileID: 358554525}
+  - component: {fileID: 358554528}
   m_Layer: 5
   m_Name: Punch Button
   m_TagString: Untagged
@@ -583,9 +616,9 @@ RectTransform:
   - {fileID: 694511556}
   m_Father: {fileID: 1237235487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507, y: 143}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -95.5, y: -129}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358554525
@@ -670,6 +703,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358554523}
   m_CullTransparentMesh: 1
+--- !u!114 &358554528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358554523}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 225043601
+      Data2: 1186818615
+      Data3: 987918213
+      Data4: -1470474671
+    Path: event:/Ring Sounds/Fish Slap Hit
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &440633779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1110,7 @@ GameObject:
   - component: {fileID: 1159913242}
   - component: {fileID: 1159913244}
   - component: {fileID: 1159913243}
-  - component: {fileID: 1159913245}
+  - component: {fileID: 1159913246}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1948,19 +2012,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1159913245
+--- !u!114 &1159913246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159913241}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1258573805
+      Data2: 1328815405
+      Data3: -2018287683
+      Data4: -1426496969
+    Path: event:/Ring_Sounds/RingStep
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 0
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1237235483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,6 +2243,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1650866464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650866454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb64758e3ae2de74692aca5ec09ae93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1159913244}
+  moveSpeed: 3
+--- !u!114 &1650866465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650866454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c3410a94595d74188484264ffec221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1159913244}
+  health: 10
+  knockbackSpeed: 3
 --- !u!1 &1827170311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,11 +2450,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -2130793698
-      Data2: 1276068149
-      Data3: 173691825
-      Data4: 1017072022
-    Path: event:/Fish Battle
+      Data1: 56871949
+      Data2: 1099428514
+      Data3: -2024556406
+      Data4: 1309117232
+    Path: event:/Crowd/Crowd Everything
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -2355,6 +2466,35 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2000515114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000515099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768486164c48ac244ad09cec2299b79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1159913244}
+  health: 10
+  knockbackSpeed: 2
+--- !u!114 &2000515115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000515099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e892d6be40252ad46a0be60fca7745c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1159913244}
+  moveSpeed: 3
 --- !u!1001 &2837416288821835354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2415,10 +2555,18 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1159913244}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3551245154854835325, guid: bdbb6b5ca477ac7419c3a4e4ea217d2a, type: 3}
+    - {fileID: 8575943445969612089, guid: bdbb6b5ca477ac7419c3a4e4ea217d2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3078150075655097212, guid: bdbb6b5ca477ac7419c3a4e4ea217d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000515115}
+    - targetCorrespondingSourceObject: {fileID: 3078150075655097212, guid: bdbb6b5ca477ac7419c3a4e4ea217d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2000515114}
     - targetCorrespondingSourceObject: {fileID: 3078150075655097212, guid: bdbb6b5ca477ac7419c3a4e4ea217d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2000515104}
@@ -2486,13 +2634,21 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 1159913244}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4538465573935726323, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
+    - {fileID: 7929279231583239509, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1923455964209758933, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1650866459}
+    - targetCorrespondingSourceObject: {fileID: 1923455964209758933, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1650866465}
+    - targetCorrespondingSourceObject: {fileID: 1923455964209758933, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1650866464}
   m_SourcePrefab: {fileID: 100100000, guid: 7ed832bf7eda1a344a1d891d1b4e67a1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
