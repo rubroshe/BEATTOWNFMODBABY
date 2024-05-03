@@ -49,7 +49,10 @@ public class GameManager : MonoBehaviour
 
         if (isMoveModeActive)
         {
-            currentPlayer.GetComponent<PlayerMovement>().MoveToCell(cellPosition);
+            if (currentPlayer.GetComponent<PlayerMovement>())
+            {
+                currentPlayer.GetComponent<PlayerMovement>().MoveToCell(cellPosition);
+            }
             isMoveModeActive = false; // Exit move mode after moving
         }
         else if (isPunchModeActive)
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
             isPunchModeActive = false; // Exit punch mode after attempting punch
         }
     }
+    
 
     private void AttemptPunch(Vector3 mousePosition)
     {
@@ -121,10 +125,8 @@ public class GameManager : MonoBehaviour
         }
 
         // Execute AI movement and punching logic
-        aiMovement.MoveTowardsPlayer(player1); // Fixed: Removed the second argument
-        aiPunch.TryPunchIfInRange(player1);
+        aiMovement.MoveTowardsPlayer(player1); // AI decides if it moves or punches
 
         EndTurn(); // End AI turn automatically
     }
-
 }

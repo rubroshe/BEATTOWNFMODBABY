@@ -37,13 +37,19 @@ public class GridManager : MonoBehaviour
 
     public bool IsCellOccupied(Vector3Int cellPosition)
     {
-        return occupiedCells.ContainsKey(cellPosition) && occupiedCells[cellPosition];
+        // Check if the position has a tile and if it's marked as occupied
+        return tilemap.HasTile(cellPosition) && (occupiedCells.ContainsKey(cellPosition) && occupiedCells[cellPosition]);
     }
 
     public void SetCellOccupied(Vector3Int cellPosition, bool occupied)
     {
         if (occupiedCells.ContainsKey(cellPosition))
         {
+            occupiedCells[cellPosition] = occupied;
+        }
+        else if (tilemap.HasTile(cellPosition))
+        {
+            // If the cell is valid but not in the dictionary, add it as occupied
             occupiedCells[cellPosition] = occupied;
         }
     }

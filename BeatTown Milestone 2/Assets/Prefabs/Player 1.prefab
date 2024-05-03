@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4879923251418187100}
   - component: {fileID: 1087929084324739912}
-  - component: {fileID: 8575943445969612089}
-  - component: {fileID: 3551245154854835325}
+  - component: {fileID: 7989626994643994040}
+  - component: {fileID: 1763986806100820781}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1844238448, guid: 108a1ebf5567a3749936c3c275e39f3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0015ba40d18eaa348b7a9ad88dea7ed1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8575943445969612089
+--- !u!114 &7989626994643994040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e892d6be40252ad46a0be60fca7745c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
---- !u!114 &3551245154854835325
+  tilemap: {fileID: 0}
+  moveSpeed: 3
+--- !u!114 &1763986806100820781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +109,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3078150075655097212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c15bc0a4f3c4d834e8886035374bed30, type: 3}
+  m_Script: {fileID: 11500000, guid: 768486164c48ac244ad09cec2299b79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
   health: 10
+  knockbackSpeed: 2

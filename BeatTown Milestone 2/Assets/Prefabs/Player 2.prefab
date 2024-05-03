@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7696742298038989418}
   - component: {fileID: 6565772511069432851}
-  - component: {fileID: 4538465573935726323}
-  - component: {fileID: 7929279231583239509}
+  - component: {fileID: 7167541741102867426}
+  - component: {fileID: 5949278717584491791}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2105686958, guid: ad35332a63e217440bfed3538b84c85c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33c42273206335141a65121c175fc762, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4538465573935726323
+--- !u!114 &7167541741102867426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +95,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923455964209758933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e892d6be40252ad46a0be60fca7745c3, type: 3}
+  m_Script: {fileID: 11500000, guid: eb64758e3ae2de74692aca5ec09ae93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
---- !u!114 &7929279231583239509
+  tilemap: {fileID: 0}
+  moveSpeed: 3
+  aiPunch: {fileID: 0}
+--- !u!114 &5949278717584491791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +110,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1923455964209758933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c15bc0a4f3c4d834e8886035374bed30, type: 3}
+  m_Script: {fileID: 11500000, guid: d0c3410a94595d74188484264ffec221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
   health: 10
+  knockbackSpeed: 3
